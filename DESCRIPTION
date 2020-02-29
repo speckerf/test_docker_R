@@ -1,13 +1,14 @@
 Package: toyr
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: A simple toy package created purely for educational purposes
+Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Serg",
+           family = "Pokrovskyy",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "serg@pokrovskyy.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+Description: Proides a single teddy() function to print and return a teddy bear ASCII art
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
