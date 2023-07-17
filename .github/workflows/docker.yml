@@ -1,5 +1,7 @@
 name: 'Docker'
 on:
+  push:
+    branches: ['master']
   pull_request:
     types:
       - closed
@@ -12,7 +14,7 @@ env:
 jobs:
   build_and_push_to_registry:
     name: Build and push Docker image to Docker Hub
-    if: github.event.pull_request.merged == true
+    #if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -26,7 +28,7 @@ jobs:
 
       - name: Get Current Date 
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"      
+        run: echo "{name}={date::$(date +'%Y-%m-%d--%M-%S')}" >> $GITHUB_OUTPUT
       - name: Build Docker Image
         run: docker build . --file Dockerfile --tag $DOCKERHUB_USERNAME/$REPOSITORY_NAME:${{ steps.date.outputs.date }}      
       - name: Push Docker Image to Docker Hub
