@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-`toyr` is a simple toy package created purely for educational purposes.
+`toyr` is a simple toy package created purely for educational purposes. 
 
 ## Installation
 
