@@ -10,7 +10,7 @@ RUN apt-get update \
  rename
 
 RUN apt-get install libxml2
-RUN apt-get install libglpk
+#RUN apt-get install libglpk
 
 #RUN R -e "install.packages('tibble'); if (!library(tibble, logical.return=T)) quit(status=10)"
 #RUN R -e "install.packages('fuzzyjoin');   if (!library(fuzzyjoin, logical.return=T)) quit(status=10)" 
