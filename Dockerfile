@@ -18,4 +18,4 @@ RUN apt-get update \
 #RUN Rscript -e 'install.packages(c("mvtnorm", "matrixcalc", "igraph", "gplots", "Matrix"))' 
 RUN R -e "install.packages('igraph'); if (!library(igraph, logical.return=T)) quit(status=10)"
 RUN R -e "install.packages('remotes'); if (!library(remotes, logical.return=T)) quit(status=10)"
-RUN R -e "remotes::install('speckerf/treemendous'); if (!library(treemendous, logical.return=T)) quit(status=10)"
+RUN R -e "remotes::install_github('speckerf/treemendous'); if (!library(treemendous, logical.return=T)) quit(status=10)"
