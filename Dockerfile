@@ -1,5 +1,5 @@
 #FROM rocker/verse:latest
-FROM rocker/rstudio:latest
+FROM rocker/verse:latest
 
 
 # RUN apt-get update \
